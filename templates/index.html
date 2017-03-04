@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/style.css">
     <title>Some game with buttons</title>
+    <script src="../scripts/main.js"></script>
 </head>
-<body>
+<body onload="main()">
     <h1 class="title panel panel-default">SOME GAME WITH BUTTONS</h1>
     <div class="main">
-        <button type="button" class="btn btn-success start-button">START THE GAME</button>
+
         <div class="hud panel panel-default field">
             <span class="score-label badge">Time: </span>
-            <span class="time-label badge">0</span>
-            <span class="score-label badge">Your score: </span>
-            <span class="score-label badge">0</span>
+            <span id="time" class="time-label badge">60</span>
+            <span class="score-label badge">HP: </span>
+            <span id="hp" class="score-label badge">10</span>
         </div>
         <div class="panel panel-default field main-field">
             <button type="button" class="btn btn-primary button">CLICK HERE</button>
@@ -25,7 +26,11 @@
             <button type="button" class="btn btn-primary button">CLICK HERE</button>
             <button type="button" class="btn btn-primary button">CLICK HERE</button>
         </div>
-
+           <button type="button" id="start-game-btn" class="btn btn-success start-button" onclick="startGame(); myTimer = setInterval(timer, 1000)">START THE GAME</button>
+          <div class="panel panel-default" id="result-panel">
+              <p class="title" id="result">WON/LOSE</p>
+               <button id="playagainbtn" type="button" class="btn btn-success button" onclick="update();startGame(); myTimer = setInterval(timer, 1000)">PLAY AGAIN</button>
+          </div>
     </div>
 </body>
 </html>

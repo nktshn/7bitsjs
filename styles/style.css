@@ -42,3 +42,19 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+#result-panel {
+    display: none;
+    text-align: center;
+    width: 600px;
+}
+
+#result {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+#playagainbtn {
+    display: none;
+
+}
