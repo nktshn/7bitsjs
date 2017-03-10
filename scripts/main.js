@@ -1,4 +1,4 @@
-var time, hp, lives, st, res, respanel, buttons, r, sleeptime, timeOut, end;
+var time, hp, lives, st, res, respanel, buttons, r, sleeptime, timeOut, end, lvlupper;
 
 
 function main() {
@@ -9,15 +9,15 @@ function main() {
     lives = 10;
     st = 10;
     buttons = document.getElementsByClassName('main-btn');
-    sleeptime = 1000;
+    sleeptime = 1400;
     end = false;
+    lvlupper = 6;
 }
 
 function startGame() {
     time.innerText = st;
     hp.innerHTML = lives;
     document.getElementById('start-game-btn').style.display = 'none';
-    generate();
     clicked('b1'); //emulation
 }
 
@@ -28,6 +28,7 @@ function youWon() {
     document.getElementById('playagainbtn').style.display = 'inline-block';
     hideButtons();
     clearInterval(timeOut);
+    clearInterval(lvlTimeOut);
 }
 
 function youLose() {
@@ -38,6 +39,7 @@ function youLose() {
     document.getElementById('playagainbtn').innerText = 'TRY AGAIN';
     hideButtons();
     clearInterval(timeOut);
+    clearInterval(lvlTimeOut);
 }
 
 function timer() {
@@ -49,6 +51,7 @@ function timer() {
             clearInterval(myTimer);
         }
     }
+
 }
 
 function update() {
@@ -57,6 +60,8 @@ function update() {
     st = 60;
     time.innerText = hp;
     respanel.style.display = 'none';
+    sleeptime = 1400;
+    lvlupper = 6;
 }
 
 function miss() {
@@ -68,6 +73,8 @@ function miss() {
     hp.innerHTML = lives;
     st = 60;
     time.innerText = st;
+    sleeptime = 1400;
+    lvlupper = 6;
 }
 
 function getRandom() {
@@ -95,8 +102,9 @@ function hideButtons() {
 function clicked(id) {
     document.getElementById(id).style.display = 'none';
     clearInterval(timeOut);
-    generate();
+    setTimeout(generate, 100);
     sleep();
+    console.log(sleeptime);
 }
 
 function sleep() {
@@ -111,4 +119,12 @@ function poof() {
     //     clearInterval(timeOut);
     //     hideButtons();
     // }
+}
+
+function lvlup() {
+    if (lvlupper == 0){
+        return;
+    }
+    lvlupper--;
+    sleeptime -= 100;
 }

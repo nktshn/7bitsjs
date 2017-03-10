@@ -34,10 +34,10 @@
                 <button id="b4" type="button" class="btn btn-primary button main-btn" onclick="clicked(id)">CLICK HERE</button>
             </div>
         </div>
-           <button type="button" id="start-game-btn" class="btn btn-success start-button" onclick="startGame(); myTimer = setInterval(timer, 1000)">START THE GAME</button>
+           <button type="button" id="start-game-btn" class="btn btn-success start-button" onclick="startGame(); lvlTimeOut = setInterval(lvlup, 10000); myTimer = setInterval(timer, 1000)">START THE GAME</button>
           <div class="panel panel-default" id="result-panel">
               <p class="title" id="result">WON/LOSE</p>
-               <button id="playagainbtn" type="button" class="btn btn-success button" onclick="update();startGame(); myTimer = setInterval(timer, 1000)">PLAY AGAIN</button>
+               <button id="playagainbtn" type="button" class="btn btn-success button" onclick="update();startGame(); lvlTimeOut = setInterval(lvlup, 10000); myTimer = setInterval(timer, 1000)">PLAY AGAIN</button>
           </div>
     </div>
 </body>
