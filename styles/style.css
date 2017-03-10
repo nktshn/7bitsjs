@@ -13,7 +13,8 @@
 }
 
 .button {
-    margin: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 20px;
+    display: none;
 }
 
 .hud {
@@ -41,6 +42,7 @@
     /*background-color: #adc4d8;*/
     padding-top: 30px;
     padding-bottom: 30px;
+    height: 120px;
 }
 
 #result-panel {
@@ -57,4 +59,9 @@
 #playagainbtn {
     display: none;
 
+}
+
+.btn-container {
+    width: 170px;
+    display: table-cell;
 }

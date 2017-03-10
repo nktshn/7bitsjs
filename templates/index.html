@@ -21,10 +21,18 @@
             <span id="hp" class="score-label badge">10</span>
         </div>
         <div class="panel panel-default field main-field">
-            <button type="button" class="btn btn-primary button">CLICK HERE</button>
-            <button type="button" class="btn btn-primary button">CLICK HERE</button>
-            <button type="button" class="btn btn-primary button">CLICK HERE</button>
-            <button type="button" class="btn btn-primary button">CLICK HERE</button>
+            <div class="btn-container">
+                <button id="b1" type="button" class="btn btn-primary button main-btn" onclick="clicked(id)">CLICK HERE</button>
+            </div>
+            <div class="btn-container">
+                <button id="b2" type="button" class="btn btn-primary button main-btn" onclick="clicked(id)">CLICK HERE</button>
+            </div>
+            <div class="btn-container">
+                <button id="b3" type="button" class="btn btn-primary button main-btn" onclick="clicked(id)">CLICK HERE</button>
+            </div>
+            <div class="btn-container">
+                <button id="b4" type="button" class="btn btn-primary button main-btn" onclick="clicked(id)">CLICK HERE</button>
+            </div>
         </div>
            <button type="button" id="start-game-btn" class="btn btn-success start-button" onclick="startGame(); myTimer = setInterval(timer, 1000)">START THE GAME</button>
           <div class="panel panel-default" id="result-panel">
