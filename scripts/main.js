@@ -7,7 +7,7 @@ function main() {
     res = document.getElementById('result');
     respanel = document.getElementById('result-panel');
     lives = 10;
-    st = 10;
+    st = 60;
     buttons = document.getElementsByClassName('main-btn');
     sleeptime = 1400;
     end = false;
